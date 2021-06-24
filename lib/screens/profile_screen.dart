@@ -25,10 +25,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         margin: EdgeInsets.only(top: height * 0.04),
         width: width,
         height: height,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15), topRight: Radius.circular(15)),
-            color: Colors.white),
+        decoration: kCircularRadius15,
         child: Column(children: <Widget>[
           SizedBox(height: height * 0.04),
           Container(
@@ -92,15 +89,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        EachRow(height, width, 'Profil saya',
-                            Icons.person_outline_outlined),
+                        EachRow(height, width, 'Profil saya', Icons.person_outline_outlined),
                         InkWell(
-                            child: Icon(Icons.arrow_forward_ios_sharp,
-                                color: Colors.orange[800]),
+                            child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
                             onTap: () {
                               setState(() {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) {
                                   return ProfileSayaScreen();
                                 }));
                               });
@@ -112,15 +106,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      EachRow(height, width, 'Plafon Kredit',
-                          Icons.monetization_on_sharp),
+                      EachRow(height, width, 'Plafon Kredit', Icons.monetization_on_sharp),
                       InkWell(
-                          child: Icon(Icons.arrow_forward_ios_sharp,
-                              color: Colors.orange[800]),
+                          child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
                           onTap: () {
                             setState(() {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) {
                                 return ProfileSayaScreen();
                               }));
                             });
@@ -131,15 +122,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      EachRow(height, width, 'History Pengajuan Kredit',
-                          Icons.restore),
+                      EachRow(height, width, 'History Pengajuan Kredit', Icons.restore),
                       InkWell(
-                          child: Icon(Icons.arrow_forward_ios_sharp,
-                              color: Colors.orange[800]),
+                          child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
                           onTap: () {
                             setState(() {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) {
                                 return ProfileSayaScreen();
                               }));
                             });
@@ -150,15 +138,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      EachRow(
-                          height, width, 'Pusat Bantuan', Icons.help_outline),
+                      EachRow(height, width, 'Pusat Bantuan', Icons.help_outline),
                       InkWell(
-                          child: Icon(Icons.arrow_forward_ios_sharp,
-                              color: Colors.orange[800]),
+                          child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
                           onTap: () {
                             setState(() {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) {
                                 return ProfileSayaScreen();
                               }));
                             });
@@ -178,8 +163,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             width: width,
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
-                padding: EdgeInsets.only(
-                    top: height * 0.013, bottom: height * 0.013),
+                padding: EdgeInsets.only(top: height * 0.013, bottom: height * 0.013),
                 backgroundColor: Colors.orange[800],
                 side: BorderSide(color: Colors.orange[800]),
                 shape: RoundedRectangleBorder(

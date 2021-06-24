@@ -12,9 +12,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             topRight: Radius.circular(15),
             topLeft: Radius.circular(15),
           ),
-          boxShadow: [
-            BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10)
-          ],
+          boxShadow: [BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10)],
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.only(
@@ -26,10 +24,8 @@ class CustomBottomNavigationBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              buildNavBarItem(Icons.home_outlined, 24, 'Beranda',
-                  kBottomBarTextColor, () {}),
-              buildNavBarItem(
-                  Icons.history, 24, 'Riwayat', kBottomBarTextColor, () {}),
+              buildNavBarItem(Icons.home_outlined, 24, 'Beranda', kBottomBarTextColor, () {}),
+              buildNavBarItem(Icons.history, 24, 'Riwayat', kBottomBarTextColor, () {}),
               Container(
                 height: 80.0,
                 child: GestureDetector(
@@ -48,18 +44,14 @@ class CustomBottomNavigationBar extends StatelessWidget {
                         Text(
                           'Allo Explore',
                           style: TextStyle(
-                              fontSize: 10.0,
-                              fontFamily: 'DMSans',
-                              color: kBottomBarTextColor),
+                              fontSize: 10.0, fontFamily: 'DMSans', color: kBottomBarTextColor),
                         )
                       ],
                     ),
                   ),
                 ),
               ),
-              buildNavBarItem(
-                  Icons.table_view_outlined, 24, 'Beranda', kBottomBarTextColor,
-                  () {
+              buildNavBarItem(Icons.table_view_outlined, 24, 'Beranda', kBottomBarTextColor, () {
                 Navigator.pushNamed(context, '/HistoryScreen');
               }),
               buildNavBarItem(Icons.person, 24, 'Profile', kPrimaryColor, () {
@@ -73,8 +65,8 @@ class CustomBottomNavigationBar extends StatelessWidget {
   }
 }
 
-Container buildNavBarItem(IconData icon, double size, String title, Color color,
-    VoidCallback onPressed) {
+Container buildNavBarItem(
+    IconData icon, double size, String title, Color color, VoidCallback onPressed) {
   final VoidCallback onPress = onPressed;
   return Container(
     height: 80.0,
@@ -82,18 +74,11 @@ Container buildNavBarItem(IconData icon, double size, String title, Color color,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         IconButton(
-          icon: Icon(
-            icon,
-            color: kBottomBarTextColor,
-          ),
+          icon: Icon(icon, color: kBottomBarTextColor),
           color: color,
           onPressed: onPress,
         ),
-        Text(
-          title,
-          style: TextStyle(
-              fontSize: 10.0, fontFamily: 'DMSans', color: kBottomBarTextColor),
-        )
+        Text(title, style: kNavigationBarTextStyle)
       ],
     ),
   );

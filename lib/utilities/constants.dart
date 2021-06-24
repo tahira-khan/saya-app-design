@@ -170,6 +170,15 @@ const kProfileCardSubTitleTextStyle = TextStyle(
   fontWeight: FontWeight.normal,
 );
 
+const kNavigationBarTextStyle = TextStyle(
+  color: kBottomBarTextColor,
+  fontSize: 10.0,
+  fontFamily: 'Montserrat',
+  letterSpacing: 0.5,
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w500,
+);
+
 const kWeight500TextStyle = TextStyle(
   fontSize: 12.0,
   fontFamily: 'Montserrat',
@@ -182,19 +191,8 @@ const kWeight700TextStyle = TextStyle(
   fontWeight: FontWeight.w700,
 );
 
-// Custom App Bar
+// Custom Box Decoration
 
-AppBar buildAppBar(String pageTitle, VoidCallback onPressed) {
-  final VoidCallback onPress = onPressed;
-  return AppBar(
-    elevation: 0,
-    backgroundColor: kPrimaryColor,
-    title: Text(pageTitle, style: kPageTitleTextStyle),
-    centerTitle: true,
-    leading: IconButton(
-      onPressed: onPress,
-      icon: Icon(Icons.arrow_back_ios_new),
-      iconSize: 20.0,
-    ),
-  );
-}
+const kCircularRadius15 = BoxDecoration(
+    borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+    color: Colors.white);
