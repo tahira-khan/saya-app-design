@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:saya/components/custom_app_bar.dart';
-import 'package:saya/screens/profile_saya_screen.dart';
 import 'package:saya/utilities/constants.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -78,7 +77,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: Material(
               color: Colors.white,
               shadowColor: Colors.white70,
-              borderRadius: BorderRadius.all(Radius.circular(8)),
+              borderRadius: BorderRadius.all(Radius.circular(15)),
               elevation: 10,
               child: Container(
                 width: width * 0.7,
@@ -96,12 +95,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         EachRow(height, width, 'Profil saya', Icons.person_outline_outlined),
                         InkWell(
                             child: IconButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/ProfileSayaScreen');
+                              },
                               icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
                             ),
                             onTap: () {
-                              setState(() {
-                                Navigator.pushNamed(context, '/ProfileSayaScreen');
-                              });
+                              setState(() {});
                             }),
                       ],
                     ),
@@ -109,9 +109,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        EachRow(height, width, 'Plafon Kredit', Icons.monetization_on_sharp),
+                        EachRow(height, width, 'Plafon Kredit', Icons.local_atm_outlined),
                         InkWell(
                             child: IconButton(
+                              onPressed: () {},
                               icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
                             ),
                             onTap: () {
@@ -126,6 +127,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         EachRow(height, width, 'History Pengajuan Kredit', Icons.restore),
                         InkWell(
                             child: IconButton(
+                              onPressed: () {},
                               icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
                             ),
                             onTap: () {
@@ -140,6 +142,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         EachRow(height, width, 'Pusat Bantuan', Icons.help_outline),
                         InkWell(
                             child: IconButton(
+                              onPressed: () {},
                               icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
                             ),
                             onTap: () {
