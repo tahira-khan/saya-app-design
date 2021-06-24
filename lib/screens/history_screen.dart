@@ -11,9 +11,9 @@ class HistoryScreen extends StatefulWidget {
 
 class _HistoryScreenState extends State<HistoryScreen> {
   AlertDialog alertDialog = AlertDialog();
-  List title = List.generate(20, (index) => 'Aplikasi Elektronik');
-  List price = List.generate(20, (index) => 'Rp 6.500,000,-');
-  List number = List.generate(20, (index) => 12403544505);
+  List title = List.generate(5, (index) => 'Aplikasi Elektronik');
+  List price = List.generate(5, (index) => 'Rp 6.500,000,-');
+  List number = List.generate(5, (index) => 12403544505);
   @override
   void initState() {
     super.initState();
