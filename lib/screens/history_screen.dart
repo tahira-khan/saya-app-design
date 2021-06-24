@@ -28,7 +28,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
       backgroundColor: kPrimaryColor,
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),
-        child: CustomAppBar(),
+        child: CustomAppBar(kHistoryScreenTitle, () {
+          Navigator.pop(context);
+        }),
       ),
       body: Container(
         margin: EdgeInsets.only(top: height * 0.04),

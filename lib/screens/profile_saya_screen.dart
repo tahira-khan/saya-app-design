@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:saya/components/bottom_navigation_bar.dart';
+import 'package:saya/components/custom_app_bar.dart';
 import 'package:saya/utilities/constants.dart';
 
 class ProfileSayaScreen extends StatefulWidget {
@@ -16,9 +17,12 @@ class _ProfileSayaScreenState extends State<ProfileSayaScreen> {
 
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      appBar: buildAppBar(kProfileSayaScreenTitle, () {
-        Navigator.pop(context);
-      }),
+      appBar: PreferredSize(
+        preferredSize: Size(double.infinity, kToolbarHeight),
+        child: CustomAppBar(kProfileSayaScreenTitle, () {
+          Navigator.pop(context);
+        }),
+      ),
       body: Container(
         margin: EdgeInsets.only(top: height * 0.04),
         decoration: BoxDecoration(

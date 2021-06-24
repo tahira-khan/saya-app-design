@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:saya/components/custom_app_bar.dart';
 import 'package:saya/screens/profile_saya_screen.dart';
 import 'package:saya/utilities/constants.dart';
 
@@ -16,7 +17,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      appBar: buildAppBar(kProfileScreenTitle, () {}),
+      appBar: PreferredSize(
+        preferredSize: Size(double.infinity, kToolbarHeight),
+        child: CustomAppBar(kProfileScreenTitle, () {}),
+      ),
       body: Container(
         margin: EdgeInsets.only(top: height * 0.04),
         width: width,
