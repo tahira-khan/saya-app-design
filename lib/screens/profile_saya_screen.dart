@@ -27,19 +27,21 @@ class _ProfileSayaScreenState extends State<ProfileSayaScreen> {
         margin: EdgeInsets.only(top: height * 0.04),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(15), topLeft: Radius.circular(15)),
+          borderRadius:
+              BorderRadius.only(topRight: Radius.circular(15), topLeft: Radius.circular(15)),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(
+              flex: 1,
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15.0),
                   boxShadow: [BoxShadow(color: Colors.black38, blurRadius: 1)],
                 ),
-                margin: EdgeInsets.fromLTRB(20, 50, 20, 10),
+                margin: EdgeInsets.fromLTRB(20, 40, 20, 30),
                 child: Padding(
                   padding: EdgeInsets.all(20.0),
                   child: ListView(

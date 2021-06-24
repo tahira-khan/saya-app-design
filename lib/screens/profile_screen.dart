@@ -25,132 +25,130 @@ class _ProfileScreenState extends State<ProfileScreen> {
         margin: EdgeInsets.only(top: height * 0.04),
         width: width,
         height: height,
-        decoration: kCircularRadius15,
+        decoration: BoxDecoration(
+            borderRadius:
+                BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+            color: Colors.white),
         child: Column(children: <Widget>[
           SizedBox(height: height * 0.04),
-          Container(
-            child: Stack(
-              children: [
-                Material(
-                  color: kBlackColorOpacity,
-                  type: MaterialType.circle,
-                  elevation: 1.0,
-                  shadowColor: kBlackColorOpacity,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 75,
+          Expanded(
+            flex: 1,
+            child: Container(
+              child: Stack(
+                children: [
+                  Material(
+                    color: kBlackColorOpacity,
+                    type: MaterialType.circle,
+                    elevation: 1.0,
+                    shadowColor: kBlackColorOpacity,
                     child: CircleAvatar(
-                      radius: 72,
-                      backgroundImage: AssetImage('images/profile.jpg'),
+                      backgroundColor: Colors.white,
+                      radius: 75,
+                      child: CircleAvatar(
+                        radius: 72,
+                        backgroundImage: AssetImage('images/profile.jpg'),
+                      ),
                     ),
                   ),
-                ),
-                Positioned(
-                  top: height * 0.13,
-                  left: width * 0.26,
-                  child: CircleAvatar(
-                    radius: 20,
-                    backgroundColor: Colors.white,
+                  Positioned(
+                    top: height * 0.13,
+                    left: width * 0.26,
                     child: CircleAvatar(
-                      radius: 18,
-                      backgroundColor: kPrimaryColor,
-                      child: IconButton(
-                          icon: Icon(Icons.edit, color: Colors.white),
-                          onPressed: () {},
-                          color: Colors.white),
+                      radius: 20,
+                      backgroundColor: Colors.white,
+                      child: CircleAvatar(
+                        radius: 18,
+                        backgroundColor: kPrimaryColor,
+                        child: IconButton(
+                            icon: Icon(Icons.edit, color: Colors.white),
+                            onPressed: () {},
+                            color: Colors.white),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           SizedBox(height: height * 0.02),
           Text(kUserName, style: kUserNameTextStyle),
-          SizedBox(height: height * 0.04),
-          Material(
-            color: Colors.white,
-            shadowColor: Colors.white70,
-            borderRadius: BorderRadius.all(Radius.circular(8)),
-            elevation: 10,
-            child: Container(
-              width: width * 0.7,
-              height: height * 0.35,
-              margin: EdgeInsets.only(
-                top: height * 0.04,
-                left: width * 0.05,
-                right: width * 0.05,
-              ),
-              child: Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, '/ProfileSayaScreen');
-                    },
-                    child: Row(
+          SizedBox(height: height * 0.02),
+          Expanded(
+            flex: 2,
+            child: Material(
+              color: Colors.white,
+              shadowColor: Colors.white70,
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+              elevation: 10,
+              child: Container(
+                width: width * 0.7,
+                height: height * 0.40,
+                margin: EdgeInsets.only(
+                  top: height * 0.02,
+                  left: width * 0.05,
+                  right: width * 0.05,
+                ),
+                child: Column(
+                  children: [
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         EachRow(height, width, 'Profil saya', Icons.person_outline_outlined),
                         InkWell(
-                            child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
+                            child: IconButton(
+                              icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
+                            ),
                             onTap: () {
                               setState(() {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                                  return ProfileSayaScreen();
-                                }));
+                                Navigator.pushNamed(context, '/ProfileSayaScreen');
                               });
                             }),
                       ],
                     ),
-                  ),
-                  divider(height, width),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      EachRow(height, width, 'Plafon Kredit', Icons.monetization_on_sharp),
-                      InkWell(
-                          child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
-                          onTap: () {
-                            setState(() {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                                return ProfileSayaScreen();
-                              }));
-                            });
-                          }),
-                    ],
-                  ),
-                  divider(height, width),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      EachRow(height, width, 'History Pengajuan Kredit', Icons.restore),
-                      InkWell(
-                          child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
-                          onTap: () {
-                            setState(() {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                                return ProfileSayaScreen();
-                              }));
-                            });
-                          }),
-                    ],
-                  ),
-                  divider(height, width),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      EachRow(height, width, 'Pusat Bantuan', Icons.help_outline),
-                      InkWell(
-                          child: Icon(Icons.arrow_forward_ios_sharp, color: Colors.orange[800]),
-                          onTap: () {
-                            setState(() {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                                return ProfileSayaScreen();
-                              }));
-                            });
-                          }),
-                    ],
-                  ),
-                ],
+                    divider(height, width),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        EachRow(height, width, 'Plafon Kredit', Icons.monetization_on_sharp),
+                        InkWell(
+                            child: IconButton(
+                              icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
+                            ),
+                            onTap: () {
+                              setState(() {});
+                            }),
+                      ],
+                    ),
+                    divider(height, width),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        EachRow(height, width, 'History Pengajuan Kredit', Icons.restore),
+                        InkWell(
+                            child: IconButton(
+                              icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
+                            ),
+                            onTap: () {
+                              setState(() {});
+                            }),
+                      ],
+                    ),
+                    divider(height, width),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        EachRow(height, width, 'Pusat Bantuan', Icons.help_outline),
+                        InkWell(
+                            child: IconButton(
+                              icon: Icon(Icons.arrow_forward_ios_sharp, color: kPrimaryColor),
+                            ),
+                            onTap: () {
+                              setState(() {});
+                            }),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -159,6 +157,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               top: height * 0.04,
               left: width * 0.09,
               right: width * 0.09,
+              bottom: height * 0.06,
             ),
             width: width,
             child: OutlinedButton(
