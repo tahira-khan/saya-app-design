@@ -209,7 +209,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget divider(height, width) {
     return Container(
-      margin: EdgeInsets.only(top: height * 0.02, bottom: height * 0.02),
+      margin: EdgeInsets.only(top: height * 0.01, bottom: height * 0.01),
       height: height * 0.002,
       color: Colors.grey[300],
     );
