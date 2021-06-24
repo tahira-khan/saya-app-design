@@ -57,14 +57,6 @@ const kButtonTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
 );
 
-const kCardTitleTextStyle = TextStyle(
-  color: Color(0xFF333333),
-  fontSize: 14.0,
-  fontFamily: 'DMSans',
-  fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w700,
-);
-
 const kCardTTDTextStyle = TextStyle(
   color: Color(0xFF333333),
   fontSize: 10.0,
@@ -73,21 +65,21 @@ const kCardTTDTextStyle = TextStyle(
   fontWeight: FontWeight.w500,
 );
 
-const kCardSubtitleTextStyle = TextStyle(
+const kCardDateTextStyle = TextStyle(
   color: Color(0xFF333333),
-  fontSize: 10.0,
-  fontFamily: 'Montserrat',
-  fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w400,
-);
-
-const kCardSubtitleNumberTextStyle = TextStyle(
-  color: Color(0xFF838484),
-  fontSize: 10.0,
+  fontSize: 14.0,
   fontFamily: 'Montserrat',
   letterSpacing: 0.5,
   fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w500,
+  fontWeight: FontWeight.w600,
+);
+
+const kCardTitleTextStyle = TextStyle(
+  color: Color(0xFF333333),
+  fontSize: 14.0,
+  fontFamily: 'DMSans',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w700,
 );
 
 const kCardPriceTextStyle = TextStyle(
@@ -99,6 +91,14 @@ const kCardPriceTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
 );
 
+const kCardSubtitleTextStyle = TextStyle(
+  color: Color(0xFF333333),
+  fontSize: 10.0,
+  fontFamily: 'Montserrat',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.w400,
+);
+
 const kCardDropTitleTextStyle = TextStyle(
   color: Color(0xFF838484),
   fontSize: 10.0,
@@ -108,13 +108,13 @@ const kCardDropTitleTextStyle = TextStyle(
   fontWeight: FontWeight.w400,
 );
 
-const kCardDateTextStyle = TextStyle(
-  color: Color(0xFF333333),
-  fontSize: 14.0,
+const kCardSubtitleNumberTextStyle = TextStyle(
+  color: Color(0xFF838484),
+  fontSize: 10.0,
   fontFamily: 'Montserrat',
   letterSpacing: 0.5,
   fontStyle: FontStyle.normal,
-  fontWeight: FontWeight.w600,
+  fontWeight: FontWeight.w500,
 );
 
 const kCardButtonTextStyle = TextStyle(
