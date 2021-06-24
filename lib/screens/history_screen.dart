@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:saya/utilities/bottom_navigation_bar.dart';
+import 'package:saya/components/bottom_navigation_bar.dart';
 import 'package:saya/utilities/constants.dart';
+import 'package:saya/components/custom_app_bar.dart';
 
 class HistoryScreen extends StatefulWidget {
   @override
@@ -25,9 +26,10 @@ class _HistoryScreenState extends State<HistoryScreen> {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      appBar: buildAppBar(kHistoryScreenTitle, () {
-        Navigator.pop(context);
-      }),
+      appBar: PreferredSize(
+        preferredSize: Size(double.infinity, kToolbarHeight),
+        child: CustomAppBar(),
+      ),
       body: Container(
         margin: EdgeInsets.only(top: height * 0.04),
         width: width,

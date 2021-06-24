@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:saya/utilities/bottom_navigation_bar.dart';
+import 'package:saya/components/bottom_navigation_bar.dart';
 import 'package:saya/utilities/constants.dart';
 
 class ProfileSayaScreen extends StatefulWidget {
